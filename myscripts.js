@@ -1,6 +1,6 @@
 // Computer Play
 function getComputerChoice() {
-    const things = ['Rock', 'Paper', 'Scissor'];
+    const things = ['Rock', 'Paper', 'Scissors'];
     const thing = things[Math.floor(Math.random() * things.length)];
     alert('The computer chose: ' + thing);
     return thing;
@@ -8,10 +8,26 @@ function getComputerChoice() {
 
 // Player Play Prompt
 function getPlayerSelection() {
-    thing = prompt('Choose Rock Paper or Scissors');
-    alert('The player chose: ' + capitalizeFirstLetter(thing));
+
+    loop:
+    while (true) {
+        var thing = prompt('Choose Rock Paper or Scissors');
+        switch (capitalizeFirstLetter(thing)) {
+            case "Rock":
+                alert('The player chose: ' + capitalizeFirstLetter(thing));
+                break loop;
+            case "Paper":
+                alert('The player chose: ' + capitalizeFirstLetter(thing));
+                break loop;
+            case "Scissors":
+                alert('The player chose: ' + capitalizeFirstLetter(thing));
+                break loop;
+            default: alert("Please enter a valid value");
+        }
+    }
     return capitalizeFirstLetter(thing);
 }
+    
 
 // Capitalize
 function capitalizeFirstLetter(s) {
@@ -19,7 +35,7 @@ function capitalizeFirstLetter(s) {
     return s && s[0].toUpperCase() + s.slice(1);
 }
 
-// Rounds
+// Round
 function playRound(playerSelection, computerSelection) {
     // your code here!
     console.log('Player Selection: ' + playerSelection);
