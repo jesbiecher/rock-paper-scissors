@@ -8,7 +8,7 @@ function getComputerChoice() {
 
 // Player Play Prompt
 function getPlayerSelection() {
-    thing = prompt ('Choose Rock Paper or Scissors');
+    thing = prompt('Choose Rock Paper or Scissors');
     alert('The player chose: ' + capitalizeFirstLetter(thing));
     return capitalizeFirstLetter(thing);
 }
@@ -24,6 +24,41 @@ function playRound(playerSelection, computerSelection) {
     // your code here!
     console.log('Player Selection: ' + playerSelection);
     console.log('Computer Selection: ' + computerSelection);
+
+    if (playerSelection == 'Rock') {
+        if (computerSelection == 'Paper') {
+            alert('You Lose! Paper beats Rock');
+            return ('Computer Wins');
+        } else if (computerSelection == 'Scissors') {
+            alert('You Win! Rock beats Scissors');
+            return ('You win!');
+        } else if (computerSelection == 'Rock') {
+            alert('It\'s a tie');
+            return ('It\'s a tie');
+        }
+    } else if (playerSelection == 'Paper') {
+        if (computerSelection == 'Paper') {
+            alert('It\'s a tie');
+            return ('It\'s a tie');
+        } else if (computerSelection == 'Scissors') {
+            alert('You Lose! Rock beats Scissors');
+            return ('Computer Wins');
+        } else if (computerSelection == 'Rock') {
+            alert('You Win! Paper beats Rock');
+            return ('You win!');
+        }
+    } else if (playerSelection == 'Scissors') {
+        if (computerSelection == 'Paper') {
+            alert('You Win! Rock beats Scissors');
+            return ('You win!');
+        } else if (computerSelection == 'Scissors') {
+            alert('It\'s a tie');
+            return ('It\'s a tie');
+        } else if (computerSelection == 'Rock') {
+            alert('You Lose! Rock beats Scissors');
+            return ('Computer Wins');
+        }
+    }
 }
 
 const playerSelection = getPlayerSelection();
