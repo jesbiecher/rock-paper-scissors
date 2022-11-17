@@ -6,11 +6,10 @@ function getComputerChoice() {
     return thing;
 }
 
-// Player Temp Play
+// Player Play Prompt
 function getPlayerSelection() {
-    const things = ['Rock', 'Paper', 'Scissor'];
-    const thing = things[Math.floor(Math.random() * things.length)];
-    alert('The player chose:' + thing);
+    thing = prompt ('Choose Rock Paper or Scissors');
+    alert('The player chose: ' + thing);
     return thing;
 }
 
