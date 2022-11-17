@@ -9,15 +9,23 @@ function getComputerChoice() {
 // Player Play Prompt
 function getPlayerSelection() {
     thing = prompt ('Choose Rock Paper or Scissors');
-    alert('The player chose: ' + thing);
-    return thing;
+    alert('The player chose: ' + capitalizeFirstLetter(thing));
+    return capitalizeFirstLetter(thing);
+}
+
+// Capitalize
+function capitalizeFirstLetter(s) {
+    s = s.toLowerCase();
+    return s && s[0].toUpperCase() + s.slice(1);
 }
 
 // Rounds
 function playRound(playerSelection, computerSelection) {
     // your code here!
+    console.log('Player Selection: ' + playerSelection);
+    console.log('Computer Selection: ' + computerSelection);
 }
 
 const playerSelection = getPlayerSelection();
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+console.log('Play Round Result: ' + playRound(playerSelection, computerSelection));
