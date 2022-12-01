@@ -1,0 +1,96 @@
+* {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.mainScreen {
+    display: flex;
+}
+
+.gameScreen {
+    display: none;
+    padding: 10px;
+}
+
+.mainScreen,
+.gameScreen {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    bottom: 50px;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.button {
+    margin: 25px;
+    border: 20px rgb(11, 53, 61) solid;
+    border-radius: 100px;
+    background: rgb(11, 53, 61);
+}
+
+.resultsContainer {
+    width: 50%;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.gameContainer img {
+    height: 150px;
+    width: 150px;
+}
+
+.resultsContainer img {
+    height: 50%;
+    width: 50%;
+}
+
+.finishedGame, .ongoingGame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#gameResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header {
+    top: 0;
+    height: 100px;
+}
+
+.footer {
+    bottom: 0;
+    height: 50px;
+}
+
+.header,
+.footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: rgb(11, 53, 61);
+    color: rgb(238, 236, 236);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
